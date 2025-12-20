@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eSales Nepal</title>
+
+    <style>
+        /* ===== GLOBAL STYLES ===== */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+
+            /* Background image with overlay */
+            background:
+                linear-gradient(
+                    rgba(28, 37, 65, 0.85),
+                    rgba(28, 37, 65, 0.85)
+                ),
+                url("background.jpeg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* ===== LOGO ===== */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 160px;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        /* ===== BUTTON ===== */
+        .redirect-button {
+            background-color: #f5a623;
+            color: #1c2541;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .redirect-button:hover {
+            background-color: #ffb84d;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 14px;
+            color: #ddd;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 34px;
+            }
+
+            .logo {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- LOGO (CLICKABLE) -->
+    <a href="https://www.esalesnepal.com" target="_blank">
+        <img src="logo.jpeg" alt="eSales Nepal Logo" class="logo">
+    </a>
+
+    <!-- MAIN CONTENT -->
+    <h1>Welcome to eSales Nepal</h1>
+    <p>
+        eSales Nepal provides complete eCommerce and digital business solutions.
+        Click below to visit our official website.
+    </p>
+
+    <!-- MANUAL REDIRECT -->
+    <a href="https://www.esalesnepal.com" class="redirect-button" target="_blank">
+        Visit Official Website
+    </a>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2025 eSales Nepal. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
