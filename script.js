@@ -91,11 +91,20 @@ if (contactForm) {
         // Get form data
         const formData = new FormData(contactForm);
         
-        // Show success message (in a real application, this would send data to a server)
-        alert('Thank you for your message! We will get back to you soon.');
+        // Show success message with better UX
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Message Sent! ✓';
+        submitButton.style.background = '#27ae60';
         
         // Reset form
         contactForm.reset();
+        
+        // Reset button after 3 seconds
+        setTimeout(() => {
+            submitButton.textContent = originalText;
+            submitButton.style.background = '';
+        }, 3000);
     });
 }
 
@@ -103,8 +112,11 @@ if (contactForm) {
 document.querySelectorAll('.category-card').forEach(card => {
     card.addEventListener('click', () => {
         // In a real application, this would navigate to the category page
-        const categoryName = card.querySelector('h3').textContent;
-        console.log(`Navigating to ${categoryName} category`);
+        // For now, we'll just add a visual feedback
+        card.style.transform = 'scale(0.98)';
+        setTimeout(() => {
+            card.style.transform = '';
+        }, 200);
     });
 });
 
